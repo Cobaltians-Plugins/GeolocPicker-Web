@@ -1,12 +1,12 @@
 (function(cobalt){
     var plugin = {
-        'name': 'geolocPicker',
+        classe: {
+        	ios: 'GeolocPickerPlugin',
+			android: 'io.kristal.geolocpicker.GeolocPicker'
+        }
         init: function () {
             // Create shortcuts
             cobalt.geolocPicker=this.selectLocation.bind(this);
-        },
-        handleEvent:function(json){
-            cobalt.log(this.name, ' plugin : unknown event received :', json)
         },
 		selectLocation: function(params, callback){
 			cobalt.plugins.send(this, 'selectLocation', params, callback)
