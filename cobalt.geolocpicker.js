@@ -1,16 +1,10 @@
 (function(cobalt){
     var plugin = {
         'name': 'geolocPicker',
-        init: function (settings) {
+        init: function () {
             // Create shortcuts
             cobalt.geolocPicker=this.selectLocation.bind(this);
-
-            if (settings) {
-                this.config(settings);
-            }
         },
-
-        config: function(settings){},
         handleEvent:function(json){
             cobalt.log(this.name, ' plugin : unknown event received :', json)
         },
