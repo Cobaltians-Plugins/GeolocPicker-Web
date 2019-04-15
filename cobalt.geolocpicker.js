@@ -12,10 +12,10 @@
       cobalt.plugins.send(this, 'selectLocation', params)
     },
     handleEvent: function(json) {
-    if (typeof cobalt.geolocPickerCallback === 'function') {
-      cobalt.geolocPickerCallback(json.data)
+      if (typeof cobalt.geolocPickerCallback === 'function') {
+        cobalt.geolocPickerCallback(json.data)
+      }
     }
-  }
   };
   cobalt.plugins.register(plugin);
 })(cobalt || {});
