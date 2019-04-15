@@ -1,5 +1,6 @@
 (function(cobalt) {
   var plugin = {
+    name: 'CobaltGeolocPickerPlugin',
     classe: {
       ios: 'GeolocPickerPlugin',
       android: 'io.kristal.geolocpicker.GeolocPicker'
